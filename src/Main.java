@@ -1,1 +1,0 @@
-import java.util.Scanner;public  class Main {    public static void main(String[] args){        int rollno = 45;        float marks = 32.3f;        char letter = 'A';        double largeDecimalNumber = 32323.33;        long largerInteger = 123456789L;        boolean check = true;    }}

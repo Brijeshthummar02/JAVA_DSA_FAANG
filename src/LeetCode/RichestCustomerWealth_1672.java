@@ -6,7 +6,7 @@ package LeetCode;
 //process
 /*
 1. itrate over every row
-2. take the sum of every row
+2. take the zzzzz.sum of every row
 3. check it with the main ans
  */
 
@@ -19,12 +19,12 @@ public class RichestCustomerWealth_1672 {
         // account = column
         int ans = Integer.MIN_VALUE;
         for (int[] ints : accounts) {
-            // when you start a new col, take a new sum for that row
+            // when you start a new col, take a new zzzzz.sum for that row
             int sum = 0;
             for (int anInt : ints) {
                 sum += anInt;
             }
-            // now we have sum of accounts of person
+            // now we have zzzzz.sum of accounts of person
             // check with overall ans
             if (sum > ans) {
                 ans = sum;

@@ -87,7 +87,7 @@ public class SudokuSolver {
 
         // check the col
         for (int[] nums : board) {
-            // check if the number is in the col
+            // check if the number is in the col 
             if (nums[col] == num) {
                 return false;
             }
