@@ -22,13 +22,13 @@ package BSQuestions;
                 // try for the middle as potential ans
                 int mid = start + (end - start) / 2;
 
-                // calculate how many pieces you can divide this in with this max zzzzz.sum
+                // calculate how many pieces you can divide this in with this max Basics.sum
                 int sum = 0;
                 int pieces = 1;
                 for(int num : nums) {
                     if (sum + num > mid) {
                         // you cannot add this in this subarray, make new one
-                        // say you add this num in new subarray, then zzzzz.sum = num
+                        // say you add this num in new subarray, then Basics.sum = num
                         sum = num;
                         pieces++;
                     } else {

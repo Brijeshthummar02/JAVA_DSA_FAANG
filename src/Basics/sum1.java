@@ -23,7 +23,7 @@ public class sum1 {
         System.out.print("Enter number 2: ");
         int num2 = in.nextInt();
         int sum = num1 + num2;
-        System.out.println("The zzzzz.sum is: " + sum);
+        System.out.println("The Basics.sum is: " + sum);
         return sum;
     }
 
@@ -34,7 +34,7 @@ public class sum1 {
         System.out.print("Enter number 2: ");
         int num2 = in.nextInt();
         int sum = num1 + num2;
-        System.out.println("The zzzzz.sum is" + sum);
+        System.out.println("The Basics.sum is" + sum);
     }
     /*
     return_type name(arguments) {

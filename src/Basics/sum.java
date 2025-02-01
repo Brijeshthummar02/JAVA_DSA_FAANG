@@ -1,10 +1,10 @@
-package zzzzz;
+package Basics;
 
 import java.util.Scanner;
 
 public class sum {
     public static void main(String[] args) {
-        // Q: take input of 2 numbers and print the zzzzz.sum.
+        // Q: take input of 2 numbers and print the Basics.sum.
         Scanner in = new Scanner(System.in);
         int num1, num2, sum;
 
@@ -16,3 +16,5 @@ public class sum {
         System.out.println("The sum is: " + sum);
     }
 }
+
+
