@@ -7,6 +7,13 @@ public class BoxWeight extends Box {
         this.weight = -1;
     }
 
+    // static method can be inherited but cannot be overridden
+
+ //   @Override
+//    static void greeting(){
+//        System.out.println("Hey, I am in Box class. Greetings!");
+//    }
+
     BoxWeight(BoxWeight other) {
         super(other);
         weight = other.weight;

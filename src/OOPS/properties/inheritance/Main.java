@@ -2,8 +2,8 @@ package OOPS.properties.inheritance;
 
 public class Main {
     public static void main(String[] args) {
-//        Box box1 = new Box(4.6, 3.4, 5.7);
-//        Box box2 = new Box(box1);
+        Box box1 = new Box(4.6, 3.4, 5.7);
+        Box box2 = new Box(box1);
 //
 //          System.out.println(box1.h + " " + box1.w + " " + box1.h);
 //    //    System.out.println(box2);
@@ -27,9 +27,14 @@ public class Main {
     //    System.out.println(box6);
 
 
-        BoxPrice box = new BoxPrice(5,8,200);
+   //     BoxPrice box = new BoxPrice(5,8,200);
 
 
+  //       box1.greeting();
+
+        // static method can be inherited but cannot be overridden
+        BoxWeight box = new BoxWeight();
+        BoxWeight.greeting(); // You can inherit but u cannot override
 
     }
 }
