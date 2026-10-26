@@ -166,6 +166,38 @@ public class LL {
         tail.next = null;
     }
 
+    public ListNode middleNode(ListNode head) {
+        ListNode slow = head;
+        ListNode fast = head;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
+
+    // Leetcode: https://leetcode.com/problems/palindrome-linked-list/
+    public boolean isPalindrome(ListNode head){
+             ListNode mid = middleNode(head);
+             ListNode headSecond = reverseList(mid);
+             ListNode reReverseHead = headSecond;
+
+             //compare both the halves
+             while(head != null && headSecond != null){
+                 if(head.val != headSecond.val){
+                        break;
+                 }
+                    head = head.next;
+                    headSecond = headSecond.next;
+             }
+
+             reverseList(reReverseHead);
+
+        return head == null || headSecond == null;
+    }
+
+
     // https://leetcode.com/problems/merge-two-sorted-lists/submissions/
     public static LL merge(LL first, LL second) {
         Node f = first.head;
@@ -267,6 +299,50 @@ public class LL {
         }
         head = prev;
     }
+
+    public ListNode reverseList(ListNode head) {
+        ListNode prev = null;
+        ListNode present = head;
+        ListNode next = present.next;
+
+        while (present != null) {
+            present.next = prev;
+            prev = present;
+            present = next;
+            if (next != null) {
+                next = next.next;
+            }
+        }
+        return prev;
+    }
+
+     // 143 leetcode reorder list
+    public void reorderList(ListNode head) {
+        if(head == null || head.next == null) {
+            return;
+        }
+
+        ListNode mid = middleNode(head);
+        ListNode hs = reverseList(mid);
+        ListNode hf = head;
+
+        // re- arrange
+        while(hf != null && hs != null) {
+            ListNode temp = hf.next;
+            hf.next = hs;
+            hf = temp;
+
+            temp = hs.next;
+            hs.next = hf;
+            hs = temp;
+        }
+        // next of tail to null
+        if(hf != null) {
+            hf.next = null;
+        }
+    }
+
+
 
 
     public static void main(String[] args) {
